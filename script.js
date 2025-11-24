@@ -16,7 +16,7 @@ const dayCountDisplay = document.getElementById("dayCount");
 const inverseCountDisplay = document.getElementById("inverseCount");
 
 dayCountDisplay.textContent = watchedDays.length;
-inverseCountDisplay.textContent = 363 - watchedDays.length;
+inverseCountDisplay.textContent = 364 - watchedDays.length;
 
 let currentDate = new Date(startDate);
 
@@ -93,7 +93,7 @@ while (currentDate <= endDate) {
 
           // Update counters
           dayCountDisplay.textContent = watchedDays.length;
-          inverseCountDisplay.textContent = 363 - watchedDays.length;
+          inverseCountDisplay.textContent = 364 - watchedDays.length;
 
           // ⭐ Highlight box
           box.classList.add("watched");
@@ -104,7 +104,7 @@ while (currentDate <= endDate) {
         });
 
         videoElement.onended = () => {
-          if (watchedDays.length === 363 && !localStorage.getItem(secretPlayedKey)) {
+          if (watchedDays.length === 364 && !localStorage.getItem(secretPlayedKey)) {
             setTimeout(() => {
               triggerEasterEgg();
             }, 500);
